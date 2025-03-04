@@ -2,7 +2,7 @@ import React from 'react';
 
 const TodoItem = ({ id, title, completed, toggleTodo, deleteTodo }) => {
   return (
-    <li>
+    <li className='todo-item'>
       <label htmlFor='check'>
         <input
           type='checkbox'
@@ -13,7 +13,7 @@ const TodoItem = ({ id, title, completed, toggleTodo, deleteTodo }) => {
         />
         {title}
       </label>
-      <button className='list__delete-btn' onClick={() => deleteTodo(id)}>
+      <button className='todo-item__delete-btn' onClick={() => deleteTodo(id)}>
         Delete
       </button>
     </li>

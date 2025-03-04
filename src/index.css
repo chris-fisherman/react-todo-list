@@ -1,1 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --fs-1: 1rem;
+  --fs-2: 1.25rem;
+}
+
+#root {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/***************************/
+/*** GENERAL STYLES ***/
+/***************************/
+button {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+}
+button:hover {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+/***************************/
+/*** NEW ITEM FORM ***/
+/***************************/
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-1);
+}
+.new-item-form__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.new-item-form__input-container label {
+  font-weight: 500;
+}
+.new-item-form__input-container input {
+  background-color: rgb(229, 229, 229);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.new-item-form__btn {
+  background-color: rgb(17, 138, 231);
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+}
+.new-item-form__btn:hover {
+  background-color: rgb(68, 169, 246);
+}
+
+/***************************/
+/*** TO-DO LIST ***/
+/***************************/
+.header {
+  font-size: var(--fs-2);
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-1);
+}
+.todo-item label {
+  display: flex;
+  gap: 5px;
+}
+.todo-list .todo-item:has(input:checked) label {
+  color: gray;
+}
+.todo-item__delete-btn {
+  background-color: rgb(255, 103, 103);
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: #fff;
+}
+.todo-item__delete-btn:hover {
+  background-color: rgb(223, 71, 71);
+}
